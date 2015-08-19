@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>易友论坛</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=640">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <script>
+    /* Fix viewport*/
+    (function(f,u){var o=navigator.userAgent,r=640,e=f.innerWidth||r,g=f.outerHeight||e,q=f.screen.width||e,d=f.screen.availWidth||e,n=f.innerHeight||r,p=f.outerHeight||n,a=f.screen.height||n,k=f.screen.availHeight||n,l=Math.min(e,g,q,d,n,p,a,k),h=l/r,b=f.devicePixelRatio;h=Math.min(h,b);if(h<1){var t=",initial-scale="+h+",maximum-scale="+h,c=u.getElementsByTagName("meta"),j;if(/iphone|ipod/ig.test(o)){j=",user-scalable=no"}if(/android/ig.test(o)){j=""}t+=j||"";for(var s=0,m;s<c.length;s++){m=c[s];if(m.name=="viewport"){m.content+=t}}}}).call(this,window,document);
+    </script>
+  </head>
+  <body ng-app="bbsApp">
+
+
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+
+      <div ng-view></div>
+
+    </div>
+
+    <share
+      text = "{{default.text}}"
+      photo = "{{default.photo}}"
+      wxtext = "{{default.wxtext}}"
+      wxtitle = "{{default.wxtitle}}"
+      wxurl = "{{default.wxurl}}"
+      wxthumb = "{{default.wxthumb}}"
+      before = "default.before"
+      after = "default.after"
+      action = "{{default.action}}">
+    </share>
+
+    <loading></loading>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/modules/utils.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/user.js"></script>
+    <script src="scripts/directives/carousel.js"></script>
+    <script src="scripts/services/values.js"></script>
+    <script src="scripts/directives/loading.js"></script>
+    <script src="scripts/services/bullshits.js"></script>
+    <script src="scripts/services/wishes.js"></script>
+    <script src="scripts/controllers/single.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

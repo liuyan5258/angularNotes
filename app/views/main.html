@@ -1,0 +1,10 @@
+<section class="m-user">
+  <div class="avatar"></div>
+  <div class="name ellipsis">啊哈哈哈哈哈</div>
+  <div class="mine">我的发帖</div>
+</section>
+<section class="m-tab">
+  <div class="box-center" ng-repeat="tab in tabs" ng-class="{on: activedTab.class === tab.class, first: $first, last: $last}" ng-click="changeTab($index)">{{tab.name}}</div>
+</section>
+<div ng-include="activedTab.template"></div>
+
